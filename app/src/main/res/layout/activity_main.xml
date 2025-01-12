@@ -11,47 +11,120 @@
         android:id="@+id/tv_hour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="00"
+        android:text="@string/tv_time"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tv_minute"
+        app:layout_constraintEnd_toStartOf="@+id/tv_hm_colon"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.376" />
+        app:layout_constraintVertical_bias="0.35" />
+
+    <TextView
+        android:id="@+id/tv_hm_colon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_colon"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_hour"
+        app:layout_constraintEnd_toStartOf="@+id/tv_minute"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_hour" />
 
     <TextView
         android:id="@+id/tv_minute"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=":00"
+        android:text="@string/tv_time"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_hour"
+        app:layout_constraintEnd_toStartOf="@+id/tv_ms_colon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_hm_colon" />
+
+    <TextView
+        android:id="@+id/tv_ms_colon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_colon"
         android:textSize="30sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_hour"
         app:layout_constraintEnd_toStartOf="@+id/tv_second"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tv_hour" />
+        app:layout_constraintStart_toEndOf="@+id/tv_minute" />
 
     <TextView
         android:id="@+id/tv_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=":00"
+        android:text="@string/tv_time"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_hour"
+        app:layout_constraintEnd_toStartOf="@+id/tv_dot"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_ms_colon" />
+
+    <TextView
+        android:id="@+id/tv_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_dot"
         android:textSize="30sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_hour"
         app:layout_constraintEnd_toStartOf="@+id/tv_millisecond"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tv_minute" />
+        app:layout_constraintStart_toEndOf="@+id/tv_second" />
 
     <TextView
         android:id="@+id/tv_millisecond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=".00"
+        android:text="@string/tv_time"
         android:textSize="25sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_hour"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tv_second" />
+        app:layout_constraintStart_toEndOf="@+id/tv_dot" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/btn_tint_color"
+        android:text="@string/btn_start"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_reset"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_record"
+        tools:layout_editor_absoluteY="619dp" />
+
+    <Button
+        android:id="@+id/btn_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/btn_tint_color"
+        android:text="@string/btn_record"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_start"
+        app:layout_constraintEnd_toStartOf="@+id/btn_start"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/btn_tint_color"
+        android:text="@string/btn_reset"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_start" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
