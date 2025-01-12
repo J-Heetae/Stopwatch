@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="btn_tint_color">#334CF2</color>
+    <color name="btn_pause">#AF0707</color>
 </resources>
